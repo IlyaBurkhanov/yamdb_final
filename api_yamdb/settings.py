@@ -12,7 +12,7 @@ DEBUG = False
 
 DJANGO_EMAIL = 'noreply@yamdb.ru'
 
-ALLOWED_HOSTS = ['*', '51.250.22.7']
+ALLOWED_HOSTS = ['*', '84.252.142.118']
 
 AUTH_USER_MODEL = 'reviews.CustomUser'
 
