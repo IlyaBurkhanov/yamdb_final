@@ -71,6 +71,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            sudo systemctl stop nginx
             sudo docker-compose stop
             sudo docker-compose rm web
             sudo rm .env
@@ -85,3 +86,4 @@ jobs:
             sudo docker-compose exec web python manage.py makemigrations reviews
             sudo docker-compose exec web python manage.py migrate
             sudo docker-compose exec web python manage.py collectstatic
+            yes
