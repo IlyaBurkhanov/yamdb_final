@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 
 from .views import (CategoriesViewSet, CommentViewSet, CreateUserViewSet,
                     GenresViewSet, MyTokenObtainPairView, ReviewViewSet,
-                    TitlesViewSet, UserViewSet)
+                    TitlesViewSet, UserViewSet, index_v2)
 
 app_name = 'api'
 
@@ -28,4 +28,5 @@ router.register(
 
 urlpatterns = [
     path('v1/', include(router.urls)),
+    path('v2/', index_v2)
 ]

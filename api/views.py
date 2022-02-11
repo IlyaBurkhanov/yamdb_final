@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.core.mail import send_mail
 from django.db.models import Avg
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from rest_framework import filters, mixins, status, viewsets
 from rest_framework.decorators import action
@@ -180,3 +181,7 @@ class CommentViewSet(viewsets.ModelViewSet):
             pk=self.kwargs['review_id'],
             title__id=self.kwargs['title_id'])
         serializer.save(author=self.request.user, review=review)
+
+
+def index_v2(request):
+    return HttpResponse("Для api2! В разработке!")
