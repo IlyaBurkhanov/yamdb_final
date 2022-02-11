@@ -17,7 +17,7 @@ services:
       - ./.env
 
   nginx:
-    image: nginx:1.21.3-alpine
+    image: nginx:latest
     ports:
       - "80:80"
 
