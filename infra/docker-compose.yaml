@@ -10,8 +10,8 @@ services:
     env_file:
       - .env
   web:
-    image: iburhanov/yamdb_final
     restart: always
+    image: iburhanov/yamdb_final
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
